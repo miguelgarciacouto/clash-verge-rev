@@ -39,7 +39,7 @@ export const ProxyGroupTools = memo(function ProxyGroupTools(props: Props) {
   const [isAutoRefresh, setIsAutoRefresh] = useState(false)
 
   useEffect(() => {
-    let timer: NodeJS.timeout
+    let timer: ReturnType<typeof setInterval>
 
     if (isAutoRefresh) {
       // triggers an immediate check when toggeld on
